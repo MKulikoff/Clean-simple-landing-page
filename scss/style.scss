@@ -1,0 +1,290 @@
+// === Fonts ===
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+// === Mixins ===
+
+@mixin roboto { 
+	font-family: 'Roboto', sans-serif;
+}
+
+@mixin quicksand {
+	font-family: 'Quicksand', sans-serif;
+}
+
+// === /Mixin === 
+
+// === Variables === 
+
+$transition: .2s; 
+$primary-color: #3D4F9F;
+$secondary-color: #8E96B7;
+
+$font-sm: 10px;
+
+// === /Variables === 
+
+// === Common === 
+body { 
+		@include roboto;
+ }
+
+ .btn {
+ 	padding: 13px 16px;
+ 	margin: 0; 
+ 	@include quicksand; 
+ 	font-weight: 700; 
+ 	font-size: 13px; 
+ 	text-decoration: none;
+	border-radius: 2px;
+	transition: $transition; 
+
+	&-primary { 
+		color: #3A79FF;
+		background: #D2E1FF;
+
+		&:hover {
+			background: #3A79FF;
+			color: #FFFFFF;
+		}
+	}
+ }
+
+h1, h2 {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	font-size: 48px; 
+}
+
+ // === /Common === 
+
+.wrapper-outer {
+	border: 1px solid #D8E3FE;
+}
+
+.wrapper-inner { 
+	max-width: 1000px; 
+	margin: 0 auto;
+
+
+	&--wide { 
+	max-width: 1200px;
+ }
+}
+
+.nav {
+	margin-left: 35px; 
+}
+
+.nav-wrapper {
+	display: flex;
+	margin: 0;
+	padding: 0; 
+	list-style: none;
+
+	&__item {
+		& + & {
+			margin-left: 42px; 
+		}
+
+		&-link {
+			text-decoration: none;
+			@include quicksand; 
+			font-size: 12px; 
+			color: #697CA6;
+			font-weight: 500; 
+
+			&--active {
+				font-weight: 700; 
+				color: #5E81FE;
+			}
+
+			&:hover {
+				color: #5E81FE;
+				transition: $transition; 
+			}
+	}
+}
+}
+
+.socials {
+	margin-left: auto; 
+}
+
+.socials-wrapper {
+	display: flex;
+	margin: 0;
+	padding: 0; 
+	list-style: none;
+	align-items: center; 
+
+	&__item {
+		& + & {
+			margin-left: 42px; 
+		}
+
+		&-link {
+			text-decoration: none;
+			@include quicksand; 
+			font-size: 12px; 
+			color: #697CA6;
+			font-weight: 500; 
+
+			path {
+				fill: #B6BAC7;
+			}
+
+			&:hover {
+				path {
+					fill: #6188FF;
+				}
+				transition: $transition; 
+
+			}
+	}
+}
+}
+
+.btn-wrapper {
+	margin-left: 44px; 
+}
+
+
+// === Header ===
+
+.section-header {
+	padding-top: 19px;
+	padding-bottom: 18px;
+}
+
+.main-navigation {
+	display: flex;
+	align-items: center;
+}
+
+.logo { 
+	width: 26px;
+	height: 26px; 
+	background-color: #5E81FE;
+	border-radius: 100%;
+ }
+
+
+// === /Header ===
+
+
+// === Hero Image === 
+
+.section-hero-image {
+
+}
+
+.slider-hero-image {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&__item {
+		height: 570px;
+		background-size: cover;
+		background-position: 50% 50%; 
+		text-align: center;
+		&-content {
+			padding-top: 92px; 
+			color: $primary-color;
+		}
+	}
+}
+
+// === /Hero Image === 
+
+// === Customers ===
+
+.section-customers {
+	padding: 58px 0px 58px 0px;
+}
+
+// === /Customers ===
+
+// === Plan and Manage === 
+
+.section-plan-and-manage {
+	background-color: #F5F8FF;
+	padding: 170px 0px 170px 0px;
+}
+
+// === /Plan and Manage === 
+
+// === Features === 
+.section-features {
+	padding: 141px 0px 171px 0px;
+}
+
+// === /Features === 
+
+
+// === Stats === 
+	.section-stats {
+		background: linear-gradient(to right, #6888FF, #5E80FF);
+	}
+
+// === /Stats === 
+
+// === Blog === 
+
+.section-blog {
+	background-color: #F5F8FF;
+}
+
+// === /Blog === 
+
+// === Quotes === 
+
+.section-quotes {
+	background: linear-gradient(to right, #EAF0FF, #F6F9FF);
+}
+
+// === /Quotes === 
+
+// === FAQ === 
+
+.section-faq {
+	padding: 176px 0px 174px 0px;
+}
+
+// === /FAQ === 
+
+
+// === Get Started === 
+
+.section-get-started {
+	background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+}
+
+// === /Get Started === 
+
+
+// === NewsLetter === 
+
+.section-newsletter {
+	background-color: #FCFDFF;
+}
+
+// === /NewsLetter === 
+
+// === Footer === 
+
+.section-footer {
+	padding: 93px 0px 93px 0px;
+}
+
+.copyright {
+	@include quicksand; 
+	padding-top: 42px;
+	font-weight: 500; 
+	color: #AEB8D0;
+	margin-left: 60px; 
+	font-size: 12px; 
+}
+
+// === /Footer === 
